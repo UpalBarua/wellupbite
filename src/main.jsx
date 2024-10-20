@@ -3,14 +3,12 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
+import Home from "./pages/Home";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "/second-page",
-    element: <div>This Is Second Page</div>,
+    element: <Home />,
   },
 ]);
 
