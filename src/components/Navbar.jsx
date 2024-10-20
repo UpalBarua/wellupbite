@@ -1,4 +1,5 @@
 import { IoFastFoodOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 export default function Navbar() {
   return (
@@ -60,6 +61,9 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
+        <a className="me-6" href="#">
+          <CiSearch className="size-8" />
+        </a>
         <a className="btn btn-outline btn-primary">Login</a>
       </div>
     </div>
