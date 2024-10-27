@@ -24,7 +24,9 @@ export default function Hero() {
                   <TfiStatsUp className="size-6" />
                   85% would make this again
                 </span>
-                <h1 className="text-5xl font-extrabold pb-4">{recipe.name}</h1>
+                <h1 className="text-5xl tracking-wider pb-4 font-lobster">
+                  {recipe.name}
+                </h1>
                 <p className="text-lg leading-relaxed max-w-[60ch] text-black/60 text-pretty">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
                   vero repellendus neque quo, veniam molestiae dolores vel

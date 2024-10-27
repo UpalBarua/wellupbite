@@ -8,7 +8,7 @@ export default function RecipeCard(props) {
   const recipe = props.recipe;
 
   return (
-    <div className="bg-base-200 border shadow-sm rounded-md">
+    <div className="bg-base-200/25 border shadow-sm rounded-md">
       <img
         src={recipe.image}
         alt={recipe.name}

@@ -8,7 +8,7 @@ export default function TopRecipes() {
 
   return (
     <section className="pt-32 pb-16 container mx-auto px-2">
-      <h2 className="text-4xl drop-shadow-md font-bold text-center flex items-center gap-3 justify-center pb-14">
+      <h2 className="font-lobster tracking-wider text-4xl drop-shadow-md font-bold text-center flex items-center gap-3 justify-center pb-14">
         <TfiStatsUp /> Our Top Recipes
       </h2>
       <div className="grid grid-cols-3 gap-5">
