@@ -3,8 +3,8 @@ import { IoFastFoodOutline } from "react-icons/io5";
 
 export default function Footer() {
   return (
-    <div>
-      <footer className="footer bg-dark text-light p-10">
+    <div className="bg-dark text-light">
+      <footer className="footer container mx-auto px-2 p-10">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
