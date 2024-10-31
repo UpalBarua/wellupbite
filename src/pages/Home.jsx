@@ -8,12 +8,10 @@ import LatestRecipes from "../components/LatestRecipes";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Hero />
       <TopRecipes />
       <LatestRecipes />
       <Newsletter />
-      <Footer />
     </div>
   );
 }

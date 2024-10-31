@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 
 export default function Navbar() {
   return (
-    <div className="navbar container mx-auto bg-base-100">
+    <div className="navbar container mx-auto bg-base-100 sticky top-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,11 +60,9 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="me-6" href="#">
-          <CiSearch className="size-8" />
-        </a>
+      <div className="navbar-end gap-2">
         <a className="btn btn-outline btn-primary">Login</a>
+        <a className="btn  btn-primary">Register</a>
       </div>
     </div>
   );
