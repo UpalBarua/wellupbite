@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <TopRecipes />
       <LatestRecipes />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 }

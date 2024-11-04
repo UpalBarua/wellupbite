@@ -11,7 +11,7 @@ export default function TopRecipes() {
       <h2 className="font-lobster tracking-wider text-4xl drop-shadow-md font-bold text-center flex items-center gap-3 justify-center pb-14">
         <TfiStatsUp /> Our Top Recipes
       </h2>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {recipes.map((recipe) => {
           return <RecipeCard key={recipe.id} recipe={recipe} />;
         })}

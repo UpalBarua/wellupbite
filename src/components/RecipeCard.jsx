@@ -14,9 +14,9 @@ export default function RecipeCard(props) {
         alt={recipe.name}
         className="rounded-tl-md rounded-tr-md border-b"
       />
-      <div className="px-5 py-4 space-y-3">
-        <h4 className="text-2xl font-medium">{recipe.name}</h4>
-        <div className="flex items-center gap-5 text-lg">
+      <div className="px-3 py-2 lg:px-4 lg:py-3 space-y-3">
+        <h4 className="text-xl lg:text-2xl font-medium">{recipe.name}</h4>
+        <div className="flex flex-col gap-2 lg:flex-row lg:gap-5 text-lg">
           <div className="flex items-center gap-2">
             <IoStar className="text-yellow-500" />
             {recipe.rating} ({recipe.reviewCount})
@@ -32,10 +32,11 @@ export default function RecipeCard(props) {
         </div>
         <div className="grid grid-cols-2 gap-3 pt-4">
           <button className="btn btn-outline">
-            <IoMdHeartEmpty className="size-5" /> Favourite
+            <IoMdHeartEmpty className="size-5 hidden lg:block" /> Favourite
           </button>
           <button className="btn btn-primary">
-            View Recipe <IoChevronForwardSharp className="size-5" />
+            View <span className="hidden lg:block">Recipe</span>{" "}
+            <IoChevronForwardSharp className="size-5 hidden lg:block" />
           </button>
         </div>
       </div>

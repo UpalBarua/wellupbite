@@ -1,9 +1,9 @@
 import { IoFastFoodOutline } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="navbar container mx-auto bg-base-100 sticky top-0 z-10">
+    <div className="navbar mx-auto bg-base-100 sticky top-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,16 +27,16 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>Recipes</a>
+              <Link to="/recipes">Recipes</Link>
             </li>
             <li>
-              <a>About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a>Buy</a>
+              <Link to="/">Buy</Link>
             </li>
           </ul>
         </div>
@@ -47,20 +47,20 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a>Recipes</a>
+            <Link to="/recipes">Recipes</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a>Buy</a>
+            <Link to="/">Buy</Link>
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-2">
+      <div className="navbar-end gap-2 hidden sm:flex">
         <a className="btn btn-outline btn-primary">Login</a>
         <a className="btn  btn-primary">Register</a>
       </div>
