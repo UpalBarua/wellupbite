@@ -3,9 +3,31 @@ import { IoStar } from "react-icons/io5";
 import { IoFlagOutline } from "react-icons/io5";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { getLocalStorage, setLocalStorage } from "../utils/localStorage";
 
 export default function RecipeCard(props) {
   const recipe = props.recipe;
+
+  function addToFavourites(recipe) {
+    const favouriteRecipes = getLocalStorage();
+
+    const isExisting = favouriteRecipes.some((favouriteRecipe) => {
+      return favouriteRecipe.id === recipe.id;
+    });
+
+    if (isExisting) {
+      const filteredRecipes = favouriteRecipes.filter((favouriteRecipe) => {
+        return favouriteRecipe.id !== recipe.id;
+      });
+
+      setLocalStorage(filteredRecipes);
+
+      return;
+    }
+
+    setLocalStorage([...favouriteRecipes, recipe]);
+  }
 
   return (
     <div className="bg-base-200/25 border shadow-sm rounded-md">
@@ -31,13 +53,16 @@ export default function RecipeCard(props) {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3 pt-4">
-          <button className="btn btn-outline">
+          <button
+            onClick={() => addToFavourites(recipe)}
+            className="btn btn-outline"
+          >
             <IoMdHeartEmpty className="size-5 hidden lg:block" /> Favourite
           </button>
-          <button className="btn btn-primary">
+          <Link to={`/recipes/${recipe.id}`} className="btn btn-primary">
             View <span className="hidden lg:block">Recipe</span>{" "}
             <IoChevronForwardSharp className="size-5 hidden lg:block" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

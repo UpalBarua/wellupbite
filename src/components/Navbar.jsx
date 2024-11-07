@@ -40,9 +40,12 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-lobster tracking-wider font-medium">
+        <Link
+          to="/"
+          className="btn btn-ghost text-xl font-lobster tracking-wider font-medium"
+        >
           <IoFastFoodOutline className="text-primary size-6" /> WellupBite
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
